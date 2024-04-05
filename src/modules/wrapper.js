@@ -36,7 +36,7 @@ const OMDBGetByImdbID = async (imdbID) => {
     let returnObject = {
         respuesta : apiResponse.data.Response === 'True' ? true : false,
         cantidadTotal : 1,
-        datos : apiResponse.data.Search
+        datos : apiResponse.data
     };
 
     return returnObject;
