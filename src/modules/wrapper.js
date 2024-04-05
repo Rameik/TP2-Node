@@ -9,7 +9,7 @@ const OMDBSearchByPage = async (searchText, page = 1) => {
     let returnObject = {
         respuesta : apiResponse.data.Response === 'True' ? true : false,
         cantidadTotal : apiResponse.data.totalResults,
-        datos : apiResponse.data
+        datos : apiResponse.data.Search
     };
 
     return returnObject;
@@ -22,7 +22,7 @@ const OMDBSearchComplete = async (searchText) => {
     let returnObject = {
         respuesta : apiResponse.data.Response === 'True' ? true : false,
         cantidadTotal : apiResponse.data.totalResults,
-        datos : apiResponse.data
+        datos : apiResponse.data.Search
     };
 
     return returnObject;
@@ -36,7 +36,7 @@ const OMDBGetByImdbID = async (imdbID) => {
     let returnObject = {
         respuesta : apiResponse.data.Response === 'True' ? true : false,
         cantidadTotal : 1,
-        datos : apiResponse.data
+        datos : apiResponse.data.Search
     };
 
     return returnObject;
